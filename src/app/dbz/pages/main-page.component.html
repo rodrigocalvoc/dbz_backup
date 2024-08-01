@@ -6,13 +6,17 @@
 <div class="row">
   <div class="col">
 
-   <app-dbz-list [characterList]="characters"   (onDelete)="onDeleteCharacter($event)"   ></app-dbz-list>       <!--le pasamos nuestro array de Personajes para que lo imprima -->
+  <app-dbz-list [characterList]="characters"   (onDelete)="onDeleteCharacter($event)"   ></app-dbz-list>      <!--Haciendo privado el dbzService en el main-page.component.ts -->
 
+   <!-- <app-dbz-list [characterList]="dbzService.characters"   (onDelete)="dbzService.deleteCharacterById($event)"   ></app-dbz-list> -->
+
+   <!-- <app-dbz-list [characterList]="dbzService.characters"   (onDelete)="dbzService.onDeleteCharacter($event)"   ></app-dbz-list>      le pasamos nuestro array de Personajes para que lo imprima  -->
 
 
   </div>
 
   <div class="col">
-    <app-dbz-add-character  (onNewCharacter)="annadirPersonajaLista($event)" ></app-dbz-add-character>
+    <app-dbz-add-character  (onNewCharacter)="onNewCharacter($event)" ></app-dbz-add-character> <!--Haciendo privado el dbzService en el main-page.component.ts -->
+    <!-- <app-dbz-add-character  (onNewCharacter)="dbzService.annadirPersonajaLista($event)" ></app-dbz-add-character> -->
   </div>
 </div>
