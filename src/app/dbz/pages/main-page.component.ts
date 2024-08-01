@@ -24,4 +24,25 @@ export class MainPageComponent {
 ];
 
 
+annadirPersonajaLista(character: Character): void {
+  console.log('Main Page');
+  console.log(character);
+  const character1: Character = {
+    name: character.name,
+    power: character.power,
+
+  };
+
+
+  this.characters.push(character1);
+}
+
+
+
+onDeleteCharacter(index: number) {
+  this.characters.splice(index,1);
+}
+
+
+
 }

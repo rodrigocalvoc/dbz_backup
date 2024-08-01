@@ -6,13 +6,13 @@
 <div class="row">
   <div class="col">
 
-   <app-dbz-list [characterList]="characters"></app-dbz-list>       <!--le pasamos nuestro array de Personajes para que lo imprima -->
+   <app-dbz-list [characterList]="characters"   (onDelete)="onDeleteCharacter($event)"   ></app-dbz-list>       <!--le pasamos nuestro array de Personajes para que lo imprima -->
 
 
 
   </div>
 
   <div class="col">
-    <app-dbz-add-character></app-dbz-add-character>
+    <app-dbz-add-character  (onNewCharacter)="annadirPersonajaLista($event)" ></app-dbz-add-character>
   </div>
 </div>
